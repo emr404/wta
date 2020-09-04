@@ -1,9 +1,12 @@
 import React from 'react'
-
+import { PlayerProvider } from "./context/PlayerContext";
+import AddPlayerComponent from "./components/AddPlayerComponent";
 const App = () => {
   return (
     <div>
-      <h2>Accent Game</h2>
+      <PlayerProvider>
+            <AddPlayerComponent />
+      </PlayerProvider>
     </div>
   )
 }
