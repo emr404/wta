@@ -1,4 +1,5 @@
-{
+{ 
+  "homepage":"https://wta.netlify.app/",
   "name": "accent-game",
   "version": "0.1.0",
   "private": true,

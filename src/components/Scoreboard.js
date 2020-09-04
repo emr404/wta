@@ -16,7 +16,7 @@ const Scoreboard = () => {
                 </div>
             </div>
             {playerData.length == 0 ? (
-                <h3 style={{ textAlign: "center", marginTop: "5vh", color: "grey" }}>
+                <h3>
                     You have no players yet :(
                 </h3>
             ) : (
