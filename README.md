@@ -14,5 +14,23 @@ The app was created using React.js which enabled efficient usage of Hooks and Co
 
 You can check it out here=> [What's the accent](https://wta.netlify.app)
 
+# Getting Started
+
+If you would like to run this app on your local machine, you can follow the steps below:
+
++ Install npm
+  `npm install npm@latest -g `
+
++ Clone this repository
+    `https://github.com/emr404/wta.git/`
+
++ Run npm install in root folder
+    `npm install`
+
++ Start server
+  `npm start`
+
++ Voila!
+ `Show off your accent impersonation skills to your friends `
 
 
