@@ -1,0 +1,140 @@
+.GameContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-width: 70vw;
+    margin-top: 2vh;
+    margin: auto;
+
+.DifficultyContainer {
+    margin: auto;
+    margin-top: 0vh;
+
+    h4 {
+        color: #FF0077;
+        font-size: 1.2em;
+        margin-top: 2vh;
+    }
+    .Easy {
+        background-color: #1e6909;
+
+    }
+
+    .Medium {
+        background-color: #f1bc2a;
+    }
+
+    .Hard {
+        background-color: #FF0000;
+    }
+
+    button {
+        width: 15vw;
+        border: none;
+        color: white;
+        padding: 1em;
+        cursor: pointer;
+        outline: none;
+        margin-top: 2vh;
+
+        &:hover {
+            transition: 0.8s ease;
+            transform: scale(0.98);
+        }
+}
+    
+}
+
+.AccentContainer {
+    background-color: white;
+    width: 60%;
+    margin: auto;
+    border-radius: 1em;
+    padding: 1em;
+    position: relative;
+    min-height: 20vh;
+    box-shadow: 0px 10px 5px 0px grey;
+    margin-top: 5vh;
+
+
+
+.Difficulty {
+    text-transform: uppercase;
+}
+
+
+
+
+.QuoteText {
+
+    text-align: center;
+    padding-top: 1.5em;
+    color: #FF0077;
+    font-size: 1.2em;
+    background-color: white;
+}
+
+.Timer {
+    position: absolute;
+    background-color: #FF0077;
+    color: white;
+    padding: 1.3em;
+
+    border-radius: 50% 0 50% 50%;
+    right: 0;
+    top: 0;
+    z-index: 2;
+
+    p {
+        background-color: #FF0077;
+        font-size: 1em;
+    }
+}
+.Accent {
+    color: #FF0077;
+    padding: 2em;
+    font-size: 1.2em;
+    text-align: center;
+    background-color: white;
+}
+}
+
+.GenerateBtnContainer {
+    margin: auto;
+    margin-top: 2em;
+
+
+.GenerateBtn {
+    border: none;
+    color: white;
+    padding: 1em;
+    min-width: 30vw;
+    background-color: #FF0077;
+    cursor: pointer;
+    margin: auto;
+    outline: none;
+    font-weight: bolder;
+    font-size: 1.2em;
+
+    &:hover {
+        transition: 0.8s ease;
+        transform: scale(0.98);
+    }
+
+}
+}
+
+
+@media (max-width: 768px) {
+
+    .AccentContainer {
+        width: 90vw;
+    }
+
+    .DifficultyContainer button {
+        width: 30vw;
+        padding: 0.8em;
+        margin-top: 1.5vh;
+    }
+}
+}

@@ -6,10 +6,6 @@
     padding: 1em;
     margin-top: 10vh;
 
-
-
-
-
 .PlayerField {
     border: none;
     color: #FF0077;
@@ -37,8 +33,6 @@
     outline: none;
     cursor: pointer;
 
-
-
     &:hover {
         transition: 1s ease;
         transform: scale(0.95);
@@ -46,31 +40,22 @@
 }
 }
 
-
 @media (max-width:768px) {
     .PlayerContainer {
-        margin-top: 5vh;
+        margin-top: 3vh;
         
         form{
             display: flex;
         .PlayerField {
-            width: 30vw;
-            height: 10vh;
+            min-width: 40vw;
+        
         }
 
         .PlayerBtn {
-            width: 10vw;
+            min-width: 25vw;
             padding: 1em 0em ;
-            height: 10vh;
-
+            
         }
     }
-
-
     }
-
-    
-
-    
-
 }
