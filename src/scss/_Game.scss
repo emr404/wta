@@ -11,7 +11,7 @@
     margin-top: 0vh;
 
     h4 {
-        color: #FF0077;
+        color: $accentColor;
         font-size: 1.2em;
         margin-top: 2vh;
     }
@@ -31,7 +31,7 @@
     button {
         width: 15vw;
         border: none;
-        color: white;
+        color: $primaryColor;
         padding: 1em;
         cursor: pointer;
         outline: none;
@@ -46,7 +46,7 @@
 }
 
 .AccentContainer {
-    background-color: white;
+    background-color: $primaryColor;
     width: 60%;
     margin: auto;
     border-radius: 1em;
@@ -69,15 +69,15 @@
 
     text-align: center;
     padding-top: 1.5em;
-    color: #FF0077;
+    color: $accentColor;
     font-size: 1.2em;
-    background-color: white;
+    background-color: $primaryColor;
 }
 
 .Timer {
     position: absolute;
-    background-color: #FF0077;
-    color: white;
+    background-color: $accentColor;
+    color: $primaryColor;
     padding: 1.3em;
 
     border-radius: 50% 0 50% 50%;
@@ -86,16 +86,16 @@
     z-index: 2;
 
     p {
-        background-color: #FF0077;
+        background-color: $accentColor;
         font-size: 1em;
     }
 }
 .Accent {
-    color: #FF0077;
+    color: $accentColor;
     padding: 2em;
     font-size: 1.2em;
     text-align: center;
-    background-color: white;
+    background-color: $primaryColor;
 }
 }
 
@@ -106,10 +106,10 @@
 
 .GenerateBtn {
     border: none;
-    color: white;
+    color: $primaryColor;
     padding: 1em;
     min-width: 30vw;
-    background-color: #FF0077;
+    background-color: $accentColor;
     cursor: pointer;
     margin: auto;
     outline: none;

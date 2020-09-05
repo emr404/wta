@@ -17,8 +17,8 @@ const ScoreboardComponent = ({ name }) => {
         <div>
             <ol>
                 <li>
-                    {" "}
-                    <h4 className="PlayerName">{name} </h4>{" "}
+                    
+                    <h4 className="PlayerName">{name} </h4>
                     <div className="ScoreBtnContainer">
                         <button
                             className="MinusBtn"
@@ -27,7 +27,7 @@ const ScoreboardComponent = ({ name }) => {
                             onClick={changeScore}
                         >
                             -
-                </button>{" "}
+                </button>
                         <h4>{realPoint}</h4>
                         <button className="AddBtn" value="+" onClick={changeScore}>
                             +

@@ -8,24 +8,24 @@
 
 .PlayerField {
     border: none;
-    color: #FF0077;
+    color: $accentColor;
     outline: none;
     padding: 1em;
     border-radius: 6px 0px 0px 6px;
     box-shadow: 0px 2px 2px 0px grey;
     font-weight: 500;
     text-transform: uppercase;
-    background-color: white;
+    background-color: $primaryColor;
     width: 20vw;
 
     &::placeholder {
-        color: #FF0077;
+        color: $accentColor;
     }
 }
 
 .PlayerBtn {
-    color: white;
-    background-color: #FF0077;
+    color: $primaryColor;
+    background-color: $accentColor;
     box-shadow: 0px 2px 2px 0px grey;
     border: none;
     padding: 1em;
@@ -48,6 +48,7 @@
             display: flex;
         .PlayerField {
             min-width: 40vw;
+            padding: 1em 1em;
         
         }
 

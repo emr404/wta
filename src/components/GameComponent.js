@@ -69,7 +69,7 @@ const GameComponent = () => {
 
             <div className='AccentContainer'>
                 <div className='Timer'>
-                    <p > {timer} </p>
+                    <p> {timer} </p>
                 </div>
                 <br />
                 <p className='QuoteText'>{quote === '' ? '[Quotes will appear here]' : quote} </p>

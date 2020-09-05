@@ -1,11 +1,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Comic+Neue&display=swap');
+$backgroundColor: #49F0EB;
+$accentColor:#FF0077;
+$primaryColor:white;
+
 * {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    background-color: #49F0EB;
+    background-color: $backgroundColor;
     font-family: 'Comic Neue', cursive;
 }
+
 
 
 @import './Main';

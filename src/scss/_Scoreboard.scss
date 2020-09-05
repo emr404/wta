@@ -1,0 +1,119 @@
+
+.ScoreboardContainer {
+    overflow-y: scroll;
+    background-color: $primaryColor;
+    min-width: 30vw;
+    height: 100vh;
+    
+    &::-webkit-scrollbar {
+        width: 0px;
+        background-color: $backgroundColor;
+    }
+
+    div,h3,h4{
+        background-color: $primaryColor;
+    }
+
+.ScoreboardHeader {
+    position: sticky;
+    top: 0;
+    z-index: 2;
+
+    .ScoreboardTitle {
+        color: $accentColor;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        text-align: center;
+        background-color: $primaryColor;
+        margin-top: 5vh;
+
+        }
+        
+    .ScoreboardDescription {
+        color: $accentColor;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 1.2em;
+        border-bottom: 2px solid red;
+        background-color: $primaryColor;
+        margin-top: 3vh;
+        text-transform: uppercase;
+        
+        h3{
+            margin-bottom: 2vh;
+        }
+
+    }
+
+}
+
+
+.EmptyPlaceholder {
+    color: grey;
+    text-align: center;
+    margin: 3vh 0;
+
+}
+
+
+
+
+
+ol {
+    display: flex;
+    margin: 3vh 0;
+    padding: 1em;
+    border-bottom: 1px dashed #929191;
+    background-color: $primaryColor;
+
+    li {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        color: $accentColor;
+        background-color: $primaryColor;
+
+        .PlayerName {
+            text-transform: uppercase;
+            background-color: $primaryColor;
+        }
+
+        .ScoreBtnContainer {
+            display: flex;
+            background-color: $primaryColor;
+
+            .AddBtn {
+                color: $primaryColor;
+                border: none;
+                background-color: #00FF21;
+                outline: none;
+                padding: 0 0.5em;
+                font-size: 1.3em;
+                cursor: pointer;
+                margin-left: 1vh;
+            }
+
+            .MinusBtn {
+                color: $primaryColor;
+                border: none;
+                background-color: #FF0000;
+                outline: none;
+                padding: 0 0.5em;
+                font-size: 1.3em;
+                cursor: pointer;
+                margin-right: 1vh;
+            }
+        }
+
+    }
+}
+
+
+@media (min-width: 768px) {
+    .ScoreboardContainer {
+        overflow-y: hidden;
+    }
+}
+
+}
