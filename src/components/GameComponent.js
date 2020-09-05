@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useContext, useRef } from 'react'
 import accentData from "../resources/AccentData";
 import { PlayerContext } from "../context/PlayerContext";
+import "../scss/style.scss";
 const GameComponent = () => {
     const [out, setOut] = useState('');
     const [quote, setQuote] = useState('');
@@ -75,7 +76,7 @@ const GameComponent = () => {
                 <p className='Accent'>{out === '' ? '[Accents will appear here]' : out + ' Accent'}</p>
             </div>
             <div className='GenerateBtnContainer'>
-                <button className='GenerateBtn' disabled={timer > 0 || playerData.length < 2} onClick={generateQuote} value={difficulty}>Generate</button>
+                <button className='GenerateBtn' disabled={timer > 0 || playerData.length < 1} onClick={generateQuote} value={difficulty}>Generate</button>
             </div>
 
 

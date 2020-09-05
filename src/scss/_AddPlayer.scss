@@ -1,0 +1,76 @@
+.PlayerContainer {
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1em;
+    margin-top: 10vh;
+
+
+
+
+
+.PlayerField {
+    border: none;
+    color: #FF0077;
+    outline: none;
+    padding: 1em;
+    border-radius: 6px 0px 0px 6px;
+    box-shadow: 0px 2px 2px 0px grey;
+    font-weight: 500;
+    text-transform: uppercase;
+    background-color: white;
+    width: 20vw;
+
+    &::placeholder {
+        color: #FF0077;
+    }
+}
+
+.PlayerBtn {
+    color: white;
+    background-color: #FF0077;
+    box-shadow: 0px 2px 2px 0px grey;
+    border: none;
+    padding: 1em;
+    border-radius: 0px 6px 6px 0px;
+    outline: none;
+    cursor: pointer;
+
+
+
+    &:hover {
+        transition: 1s ease;
+        transform: scale(0.95);
+    }
+}
+}
+
+
+@media (max-width:768px) {
+    .PlayerContainer {
+        margin-top: 5vh;
+        
+        form{
+            display: flex;
+        .PlayerField {
+            width: 30vw;
+            height: 10vh;
+        }
+
+        .PlayerBtn {
+            width: 10vw;
+            padding: 1em 0em ;
+            height: 10vh;
+
+        }
+    }
+
+
+    }
+
+    
+
+    
+
+}

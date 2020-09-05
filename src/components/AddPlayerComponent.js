@@ -1,5 +1,6 @@
 import React, { useState, useContext } from "react";
 import { PlayerContext } from "../context/PlayerContext";
+import "../scss/style.scss";
 const AddPlayerComponent = () => {
     const [playerName, setPlayerName] = useState("");
     const [playerData, setPlayerData] = useContext(PlayerContext);
@@ -19,16 +20,10 @@ const AddPlayerComponent = () => {
     return (
         <div className="PlayerContainer">
             <form onSubmit={addData}>
-                <input
-                    className="PlayerField"
-                    type="text"
-                    value={playerName}
-                    onChange={addPlayer}
-                    placeholder="Player Name"
-                />
-                <button disabled={playerName === ""} className="PlayerBtn">
-                    Add Player
-            </button>
+            <label htmlFor="Player Name">
+                <input className="PlayerField" type="text" value={playerName} onChange={addPlayer} placeholder="Player Name"/>
+                </label>
+                <button disabled={playerName === ""} className="PlayerBtn">Add Player</button>
             </form>
         </div>
     );

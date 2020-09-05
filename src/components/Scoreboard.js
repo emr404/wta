@@ -1,6 +1,7 @@
 import React, { useContext, useState } from "react";
 import ScoreboardComponent from "./ScoreboardComponent";
 import { PlayerContext } from "../context/PlayerContext";
+import "../scss/style.scss";
 
 const Scoreboard = () => {
     const [playerData, setPlayerData] = useContext(PlayerContext);
@@ -16,7 +17,7 @@ const Scoreboard = () => {
                 </div>
             </div>
             {playerData.length == 0 ? (
-                <h3>
+                <h3 className='EmptyPlaceholder'>
                     You have no players yet :(
                 </h3>
             ) : (

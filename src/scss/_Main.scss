@@ -1,0 +1,19 @@
+.MainGameContainer {
+    display: flex;
+}
+
+@media (max-width: 768px) {
+    * {
+        overflow-y: scroll;
+    }
+    .MainGameContainer {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    
+
+    .MainScoreboardContainer {
+        margin-top: 5vh;
+    }
+}
+}
