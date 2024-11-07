@@ -3,7 +3,7 @@ import { PlayerContext } from "../context/PlayerContext";
 import "../scss/style.scss";
 const AddPlayerComponent = () => {
     const [playerName, setPlayerName] = useState("");
-    const [setPlayerData] = useContext(PlayerContext);
+    const [playerData, setPlayerData] = useContext(PlayerContext);
 
     const addData = (e) => {
         e.preventDefault();

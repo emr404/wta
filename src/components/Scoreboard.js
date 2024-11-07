@@ -4,7 +4,7 @@ import { PlayerContext } from "../context/PlayerContext";
 import "../scss/style.scss";
 
 const Scoreboard = () => {
-    const [playerData] = useContext(PlayerContext);
+    const [playerData, setPlayerData] = useContext(PlayerContext);
 
     return (
         <div className="ScoreboardContainer">

@@ -2,7 +2,7 @@ import React, { useContext, useState } from "react";
 import { PlayerContext } from "../context/PlayerContext";
 import "../scss/style.scss";
 const ScoreboardComponent = ({ name }) => {
-    const [playerData] = useContext(PlayerContext);
+    const [playerData, setPlayerData] = useContext(PlayerContext);
     const [realPoint, setRealPoint] = useState(0);
     const changeScore = (e) => {
         e.preventDefault();
