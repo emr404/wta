@@ -4,6 +4,7 @@ import { PlayerContext } from "../context/PlayerContext";
 import "../scss/style.scss";
 
 const Scoreboard = () => {
+        // eslint-disable-next-line no-unused-vars
     const [playerData, setPlayerData] = useContext(PlayerContext);
 
     return (

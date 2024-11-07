@@ -10,6 +10,7 @@ const GameComponent = () => {
     const ref = useRef(false);
     const [timer, setTimer] = useState();
     const [difficulty, setDifficulty] = useState('easy');
+        // eslint-disable-next-line no-unused-vars
     const [playerData, setPlayerData ] = useContext(PlayerContext);
 
     useEffect(() => {
