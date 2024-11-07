@@ -20,8 +20,8 @@ const AddPlayerComponent = () => {
     return (
         <div className="PlayerContainer">
             <form onSubmit={addData}>
-            <label htmlFor="Player Name">
-                <input className="PlayerField" type="text" value={playerName} onChange={addPlayer} placeholder="Player Name"/>
+                <label htmlFor="Player Name">
+                    <input className="PlayerField" type="text" value={playerName} onChange={addPlayer} placeholder="Player Name" />
                 </label>
                 <button disabled={playerName === ""} className="PlayerBtn">Add Player</button>
             </form>

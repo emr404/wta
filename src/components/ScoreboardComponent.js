@@ -17,21 +17,19 @@ const ScoreboardComponent = ({ name }) => {
         <div>
             <ol>
                 <li>
-                    
                     <h4 className="PlayerName">{name} </h4>
                     <div className="ScoreBtnContainer">
                         <button
                             className="MinusBtn"
                             value="-"
                             disabled={realPoint === 0}
-                            onClick={changeScore}
-                        >
+                            onClick={changeScore}>
                             -
-                </button>
+                        </button>
                         <h4>{realPoint}</h4>
                         <button className="AddBtn" value="+" onClick={changeScore}>
                             +
-                </button>
+                        </button>
                     </div>
                 </li>
             </ol>
