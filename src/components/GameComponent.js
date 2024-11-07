@@ -10,7 +10,7 @@ const GameComponent = () => {
     const ref = useRef(false);
     const [timer, setTimer] = useState();
     const [difficulty, setDifficulty] = useState('easy');
-    const [playerData, setPlayerData] = useContext(PlayerContext);
+    const [playerData] = useContext(PlayerContext);
 
     useEffect(() => {
         if (ref.current) {
