@@ -1,14 +1,14 @@
 # What's the Accent?
 Accent guessing game
 ## About
-This is a fun game that generates random quotes from a [free API](https://type.fit/api/quotes) alongside a random accent where users will read the quote in the accent generated and their opponents will try and guess the accent the quote is read in.
+This is a fun game that generates random quotes from a [DummyJSON API](https://dummyjson.com/quotes/random) alongside a random accent where users will read the quote in the accent generated and their opponents will try and guess the accent the quote is read in.
 
 The app was created using React.js which enabled efficient usage of Hooks and Context api for state management while styling the app using Sass.
 
 ## Tools Used
 - React.js
 - Sass
-- Type Fit api [Link](https://type.fit/api/quotes)
+- DummyJSON quotes API [Link](https://dummyjson.com/docs/quotes)
 
 ## Where can you play?
 
@@ -16,26 +16,27 @@ You can check it out here=> [What's the accent](https://wta.netlify.app)
 
 # Getting Started
 
-    If you would like to run this app on your local machine, you can follow the steps below:
+Install Node.js 22 LTS or newer (npm is included), then run these commands from the project folder:
 
-+ Install npm
+```sh
+npm ci
+npm start
+```
 
-  `npm install npm@latest -g `
+Open http://localhost:3000 (or the address printed in the terminal if that port is busy). Press Ctrl+C to stop the server. Stop any running development server before running `npm ci` again, since it replaces `node_modules`.
 
-+ Clone this repository
+The app uses React 19.3.1. Quote generation requires an internet connection to DummyJSON.
 
-    `https://github.com/emr404/wta.git/`
+To run the tests once:
 
-+ Run npm install in root folder
+```sh
+npm test -- --watchAll=false
+```
 
-    `npm install`
+To create a production build in `build/`:
 
-+ Start server
+```sh
+npm run build
+```
 
-  `npm start`
-
-+ Voila!
-
- `Show off your accent impersonation skills to your friends `
-
-
+Use npm and the committed `package-lock.json` to keep dependency versions consistent.

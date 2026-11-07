@@ -1,19 +1,66 @@
+.AppShell {
+  width: min(1140px, calc(100% - 64px));
+  margin: 40px auto;
+}
+.AppShell > h1 {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 28px;
+  letter-spacing: -1px;
+  font-weight: 700;
+  margin-bottom: 30px;
+  line-height: 1.15;
+  color: var(--ink);
+}
+.GameLogo {
+  width: 34px;
+  height: 34px;
+  flex-shrink: 0;
+  color: var(--ink);
+}
+.TitleText > span {
+  color: var(--ink);
+}
 .MainGameContainer {
-    display: flex;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 340px;
+  gap: 32px;
+  align-items: stretch;
 }
-
-@media (max-width: 768px) {
-    * {
-        overflow-y: scroll;
-    }
-    .MainGameContainer {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-    
-
-    .MainScoreboardContainer {
-        margin-top: 5vh;
-    }
+.PlayArea,
+.MainScoreboardContainer {
+  min-width: 0;
 }
+.MainScoreboardContainer {
+  display: grid;
+}
+@media (max-width: 850px) {
+  .AppShell {
+    width: calc(100% - 32px);
+    margin: 26px auto;
+  }
+  .AppShell > h1 {
+    gap: 10px;
+    margin-bottom: 25px;
+    letter-spacing: -1px;
+    font-size: 28px;
+  }
+  .GameLogo {
+    width: 35px;
+    height: 35px;
+  }
+  .MainGameContainer {
+    grid-template-columns: 1fr;
+    gap: 26px;
+  }
+}
+@media (max-width: 370px) {
+  .AppShell > h1 {
+    font-size: 24px;
+  }
+  .GameLogo {
+    width: 30px;
+    height: 30px;
+  }
 }

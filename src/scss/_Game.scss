@@ -1,140 +1,249 @@
-.GameContainer {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    min-width: 70vw;
-    margin-top: 2vh;
-    margin: auto;
-
 .DifficultyContainer {
-    margin: auto;
-    margin-top: 0vh;
-
-    h4 {
-        color: $accentColor;
-        font-size: 1.2em;
-        margin-top: 2vh;
-    }
-    .Easy {
-        background-color: #1e6909;
-
-    }
-
-    .Medium {
-        background-color: #f1bc2a;
-    }
-
-    .Hard {
-        background-color: #FF0000;
-    }
-
-    button {
-        width: 15vw;
-        border: none;
-        color: $primaryColor;
-        padding: 1em;
-        cursor: pointer;
-        outline: none;
-        margin-top: 2vh;
-
-        &:hover {
-            transition: 0.8s ease;
-            transform: scale(0.98);
-        }
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 18px;
 }
-    
+.DifficultyContainer h3 {
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--ink);
 }
-
-.AccentContainer {
-    background-color: $primaryColor;
-    width: 60%;
-    margin: auto;
-    border-radius: 1em;
-    padding: 1em;
-    position: relative;
-    min-height: 20vh;
-    box-shadow: 0px 10px 5px 0px grey;
-    margin-top: 5vh;
-
-
-
+.DifficultyOptions {
+  display: flex;
+  gap: 6px;
+}
+.DifficultyOptions button {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  padding: 10px 13px;
+  border: 1px solid var(--accent);
+  border-radius: 9px;
+  background: #ffffff;
+  color: var(--ink);
+  font-size: 12px;
+  font-weight: 700;
+}
+.LevelBars {
+  display: flex;
+  align-items: flex-end;
+  height: 13px;
+  gap: 2px;
+}
+.LevelBars i {
+  display: block;
+  width: 3px;
+  height: 5px;
+  background: currentColor;
+  opacity: 0.2;
+  border-radius: 1px;
+}
+.LevelBars i:nth-child(2) {
+  height: 9px;
+}
+.LevelBars i:nth-child(3) {
+  height: 13px;
+}
+.Easy .LevelBars i:first-child,
+.Medium .LevelBars i:not(:last-child),
+.Hard .LevelBars i {
+  opacity: 1;
+}
+.DifficultyOptions button:hover {
+  border-color: var(--ink);
+  color: var(--ink);
+}
+.DifficultyOptions .Easy[aria-pressed="true"] {
+  background: var(--accent);
+  border-color: var(--ink);
+  color: var(--ink);
+}
+.DifficultyOptions .Medium[aria-pressed="true"] {
+  background: var(--accent);
+  border-color: var(--ink);
+  color: var(--ink);
+}
+.DifficultyOptions .Hard[aria-pressed="true"] {
+  background: var(--accent);
+  border-color: var(--ink);
+  color: var(--ink);
+}
+.CurrentLevel {
+  margin-left: auto;
+  color: var(--muted);
+  font-size: 10px;
+}
 .Difficulty {
-    text-transform: uppercase;
+  text-transform: capitalize;
+  color: var(--ink);
+  font-weight: 700;
 }
-
-
-
-
-.QuoteText {
-
-    text-align: center;
-    padding-top: 1.5em;
-    color: $accentColor;
-    font-size: 1.2em;
-    background-color: $primaryColor;
+.AccentContainer {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-height: 390px;
+  border: 2px solid #ffffff;
+  border-radius: 8px;
+  background: #ffffff;
+  color: var(--ink);
+  padding: 27px 29px 0;
+  overflow: hidden;
 }
-
+.CardTopline {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 12px;
+  color: var(--ink);
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 1.6px;
+}
 .Timer {
-    position: absolute;
-    background-color: $accentColor;
-    color: $primaryColor;
-    padding: 1.3em;
-
-    border-radius: 50% 0 50% 50%;
-    right: 0;
-    top: 0;
-    z-index: 2;
-
-    p {
-        background-color: $accentColor;
-        font-size: 1em;
-    }
+  position: relative;
+  isolation: isolate;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0;
+  width: 48px;
+  height: 48px;
+  flex-shrink: 0;
+  border-radius: 50%;
+  background: conic-gradient(var(--primary) var(--timer-progress), #e6e6e6 0);
+  color: var(--ink);
+  font-variant-numeric: tabular-nums;
+  letter-spacing: 0;
+}
+.Timer::before {
+  content: "";
+  position: absolute;
+  inset: 3px;
+  border-radius: 50%;
+  background: #ffffff;
+  z-index: -1;
+}
+.Timer p,
+.Timer .TimerInitial {
+  font-size: 20px;
+  line-height: 1;
+  font-weight: 700;
+}
+.Timer p:empty {
+  display: none;
+}
+.TimerUnit {
+  color: var(--ink);
+  font-size: 8px;
+  margin-top: 1px;
+  font-weight: 600;
+}
+.QuoteText {
+  margin: auto 0;
+  padding: 32px 0 38px;
+  font-size: clamp(24px, 2.7vw, 32px);
+  line-height: 1.35;
+  font-weight: 700;
+  letter-spacing: -0.7px;
+  text-align: center;
+  overflow-wrap: anywhere;
+}
+.AccentReveal {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 9px;
+  text-align: center;
+  margin: 0 -29px;
+  padding: 22px 29px 25px;
+  background: #ffffff;
+  color: var(--ink);
+  border-top: 1px solid #e6e6e6;
 }
 .Accent {
-    color: $accentColor;
-    padding: 2em;
-    font-size: 1.2em;
-    text-align: center;
-    background-color: $primaryColor;
+  font-size: clamp(23px, 2.8vw, 30px);
+  line-height: 1.15;
+  font-weight: 700;
+  letter-spacing: -0.8px;
+  max-width: 100%;
+  overflow-wrap: anywhere;
 }
+.HasRound .Accent {
+  animation: accent-in 260ms ease-out;
 }
-
+.TimeLow .Timer {
+  background: conic-gradient(var(--primary) var(--timer-progress), #e6e6e6 0);
+  color: var(--ink);
+}
+.TimeLow .Timer {
+  outline: 1px dashed var(--ink);
+  outline-offset: 5px;
+}
+.TimeLow .TimerUnit {
+  color: var(--ink);
+}
 .GenerateBtnContainer {
-    margin: auto;
-    margin-top: 2em;
-
-
+  margin-top: 18px;
+}
 .GenerateBtn {
-    border: none;
-    color: $primaryColor;
-    padding: 1em;
-    min-width: 30vw;
-    background-color: $accentColor;
-    cursor: pointer;
-    margin: auto;
-    outline: none;
-    font-weight: bolder;
-    font-size: 1.2em;
-
-    &:hover {
-        transition: 0.8s ease;
-        transform: scale(0.98);
-    }
-
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  width: 100%;
+  min-height: 53px;
+  padding: 13px 24px;
+  font-size: 16px;
 }
+.GenerateBtn span {
+  font-size: 26px;
+  line-height: 1;
+  font-weight: 500;
 }
-
-
-@media (max-width: 768px) {
-
-    .AccentContainer {
-        width: 90vw;
-    }
-
-    .DifficultyContainer button {
-        width: 30vw;
-        padding: 0.8em;
-        margin-top: 1.5vh;
-    }
+@keyframes accent-in {
+  from {
+    opacity: 0;
+    transform: translateY(6px) scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
 }
+@media (max-width: 1080px) {
+  .CurrentLevel {
+    width: 100%;
+    margin-left: 0;
+  }
+}
+@media (max-width: 720px) {
+  .AccentContainer {
+    min-height: 350px;
+    padding: 22px 21px 0;
+  }
+  .QuoteText {
+    font-size: 25px;
+    padding: 32px 0;
+  }
+  .AccentReveal {
+    margin: 0 -21px;
+    padding: 19px 21px 22px;
+  }
+  .DifficultyContainer {
+    gap: 10px;
+  }
+  .DifficultyOptions button {
+    padding: 9px 10px;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .HasRound .Accent {
+    animation: none;
+    transition: none;
+  }
 }
